@@ -4,12 +4,6 @@ let j: number = 0;
 for (i = 0; i < filas.length; i++) {
   filas[i] = [0, 0, 0];
 }
-let asientos = String(prompt("quiere ver los asientos libres?S/N"));
-
-while (asientos !== "S") {
-  asientos = String(prompt("quiere ver los asientos libres?S/N"));
-}
-console.log(filas);
 
 function asientosLibres(): any {
   let asientos = String(prompt("quiere ver los asientos libres?S/N"));
@@ -30,7 +24,7 @@ function asientoVenta(): any {
     j = Number(prompt("que asiento quiere comprar de la fila", i));
   }
 }
-
+asientosLibres();
 asientoVenta();
 filas[i][j] = 1;
 console.log(filas);
